@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import  {Heading}  from '../global-style.js';
+import  {Heading, InputStyle}  from '../global-style.js';
 
+// const Input = styled.input`${InputStyle};`;
 
 const Title = () => {
     return (
@@ -13,6 +14,7 @@ const Title = () => {
 
 const TodoForm = ({addTodo}) =>{
     let input;
+    // let input;
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -20,12 +22,16 @@ const TodoForm = ({addTodo}) =>{
             input.value = "";
         }}>
             <label>
-                Add new To-do :
-                <input type="text" ref={node => {
-                    input = node;
-                }}  />
+                <input
+                    type="text"
+                    ref={node => {
+                        input = node;
+                    }}
+                    placeholder="What needs to be done?"
+                    autoFocus={true}
+                />
             </label>
-            <input type="submit" value="Add" />
+            {/*<input type="submit" value="Add" />*/}
         </form>
     );
 }
