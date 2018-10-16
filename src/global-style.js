@@ -1,0 +1,15 @@
+import styled from 'styled-components';
+
+export const Wrapper = styled.section`
+    padding: 0;
+    margin: 0;
+    text-align: center;
+`;
+
+export const Heading = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+
